@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layoutDescription="@xml/drag_up_scene">
+
+
+    <ImageView
+        android:id="@+id/arrow_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_keyboard_arrow_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvPosts"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        />
+
+
+    <View
+        android:id="@+id/dial_pad"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/cerulean_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvComments"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:paddingBottom="100dp"
+
+        app:layout_constraintStart_toStartOf="@id/dial_pad"
+        app:layout_constraintTop_toTopOf="@id/dial_pad"
+        />
+
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
